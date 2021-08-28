@@ -120,6 +120,7 @@ export default {
               fio: 'Эдельман Татьяна Николаевна',
               position: 'Председатель комитета',
               diligence: '7.8',
+              workload: 30,
             },
             {
               id: 22,
@@ -127,6 +128,7 @@ export default {
               fio: 'Перевалова Надежда Анатольевна',
               position: 'Консультат по правовым вопросам',
               diligence: '7.8',
+              workload: 30,
             },
             {
               id: 33,
@@ -134,6 +136,7 @@ export default {
               fio: 'Уколова Мария Романовна',
               position: 'Консультат по правовым вопросам',
               diligence: '7.8',
+              workload: 30,
             },
           ],
           otherUnits: [
@@ -149,6 +152,7 @@ export default {
                   fio: 'Эдельман Татьяна Николаевна',
                   position: 'Председатель комитета',
                   diligence: '7.8',
+                  workload: 30,
                 },
                 {
                   id: 22,
@@ -156,6 +160,7 @@ export default {
                   fio: 'Перевалова Надежда Анатольевна',
                   position: 'Консультат по правовым вопросам',
                   diligence: '7.8',
+                  workload: 30,
                 },
                 {
                   id: 33,
@@ -163,6 +168,7 @@ export default {
                   fio: 'Уколова Мария Романовна',
                   position: 'Консультат по правовым вопросам',
                   diligence: '7.8',
+                  workload: 30,
                 },
               ],
             },
@@ -180,6 +186,7 @@ export default {
               fio: 'Эдельман Татьяна Николаевна',
               position: 'Председатель комитета',
               diligence: '7.8',
+              workload: 30,
             },
             {
               id: 22,
@@ -187,6 +194,7 @@ export default {
               fio: 'Перевалова Надежда Анатольевна',
               position: 'Консультат по правовым вопросам',
               diligence: '7.8',
+              workload: 30,
             },
             {
               id: 33,
@@ -194,6 +202,7 @@ export default {
               fio: 'Уколова Мария Романовна',
               position: 'Консультат по правовым вопросам',
               diligence: '7.8',
+              workload: 30,
             },
           ],
           otherUnits: [
@@ -209,6 +218,7 @@ export default {
                   fio: 'Эдельман Татьяна Николаевна',
                   position: 'Председатель комитета',
                   diligence: '7.8',
+                  workload: 30,
                 },
                 {
                   id: 22,
@@ -216,6 +226,7 @@ export default {
                   fio: 'Перевалова Надежда Анатольевна',
                   position: 'Консультат по правовым вопросам',
                   diligence: '7.8',
+                  workload: 30,
                 },
                 {
                   id: 33,
@@ -223,6 +234,7 @@ export default {
                   fio: 'Уколова Мария Романовна',
                   position: 'Консультат по правовым вопросам',
                   diligence: '7.8',
+                  workload: 30,
                 },
               ],
             },
@@ -240,6 +252,7 @@ export default {
               fio: 'Эдельман Татьяна Николаевна',
               position: 'Председатель комитета',
               diligence: '7.8',
+              workload: 30,
             },
             {
               id: 22,
@@ -247,6 +260,7 @@ export default {
               fio: 'Перевалова Надежда Анатольевна',
               position: 'Консультат по правовым вопросам',
               diligence: '7.8',
+              workload: 30,
             },
             {
               id: 33,
@@ -254,6 +268,7 @@ export default {
               fio: 'Уколова Мария Романовна',
               position: 'Консультат по правовым вопросам',
               diligence: '7.8',
+              workload: 30,
             },
           ],
           otherUnits: [
@@ -269,6 +284,7 @@ export default {
                   fio: 'Эдельман Татьяна Николаевна',
                   position: 'Председатель комитета',
                   diligence: '7.8',
+                  workload: 30,
                 },
                 {
                   id: 22,
@@ -276,6 +292,7 @@ export default {
                   fio: 'Перевалова Надежда Анатольевна',
                   position: 'Консультат по правовым вопросам',
                   diligence: '7.8',
+                  workload: 30,
                 },
                 {
                   id: 33,
@@ -283,6 +300,7 @@ export default {
                   fio: 'Уколова Мария Романовна',
                   position: 'Консультат по правовым вопросам',
                   diligence: '7.8',
+                  workload: 30,
                 },
               ],
             },
@@ -460,6 +478,7 @@ export default {
       box-sizing: border-box;
       border: none;
       outline: none;
+      cursor: pointer;
       &::placeholder {
         font-style: normal;
         font-weight: normal;

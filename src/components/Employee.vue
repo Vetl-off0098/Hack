@@ -56,6 +56,7 @@ export default {
   background-color: #fff;
   border-radius: 20px;
   cursor: pointer;
+  position: relative;
   &:hover {
     background-color: #F8F8F8;
   }
@@ -128,5 +129,7 @@ export default {
   background-image: url("../../public/svg/arrowLeft.svg");
   width: 24px;
   height: 24px;
+  position: absolute;
+  right: 26px;
 }
 </style>

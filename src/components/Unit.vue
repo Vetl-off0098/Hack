@@ -5,7 +5,10 @@
       @click="wasClicked = !wasClicked"
     >
       <div class="unit__arrow">
-        <div class="unit__svgArrow"></div>
+        <div
+          class="unit__svgArrow"
+          :class="{ unit__svgArrow_rotate: wasClicked }"
+        ></div>
       </div>
 
       <div class="unit__name">{{ unit.title }}</div>
@@ -17,12 +20,14 @@
           <div class="countPeople__value">{{ unit.peopleCount }}</div>
         </div>
 
-        <v-progress-linear
-          class="unit__workload"
-          v-model="unit.workload"
-          :buffer-value="100"
-          color="#1DA442"
-        ></v-progress-linear>
+        <div class="unit__workloadWrap">
+          <v-progress-linear
+            class="unit__workload"
+            v-model="unit.workload"
+            :buffer-value="100"
+            color="#1DA442"
+          ></v-progress-linear>
+        </div>
       </div>
     </div>
 
@@ -39,11 +44,16 @@
       </div>
 
       <div
-        class="unit__otherUnits"
-        v-for="unit of unit.otherUnits"
-        :key="unit.id"
+        v-if="unit.otherUnits"
+        class="unit__otherUnitsWrap"
       >
-        <Unit :unit="unit"/>
+        <div
+          class="unit__otherUnits"
+          v-for="unit of unit.otherUnits"
+          :key="unit.id"
+        >
+          <Unit :unit="unit"/>
+        </div>
       </div>
     </div>
   </div>
@@ -75,8 +85,6 @@ export default {
 
 <style scoped lang="scss">
 .unit {
-  padding-left: 36px;
-  box-sizing: border-box;
   &__title {
     cursor: pointer;
     display: flex;
@@ -85,12 +93,18 @@ export default {
   &__arrow {
     width: 16px;
     height: 16px;
-    margin-right: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   &__svgArrow {
     background-image: url("../../public/svg/Vector.svg");
-    height: 4.4px;
-    width: 7.5px;
+    height: 7px;
+    width: 9.5px;
+    transform: rotate(-90deg);
+    &_rotate {
+      transform: rotate(0deg);
+    }
   }
   &__name {
     font-style: normal;
@@ -103,12 +117,20 @@ export default {
     display: flex;
     margin-left: 16.7px;
   }
+  &__workloadWrap {
+    display: flex;
+    align-items: center;
+  }
   &__workload {
     margin-left: 12px;
     width: 32px;
   }
   &__drop {
+    padding-left: 26px;
+    box-sizing: border-box;
     border-left: 1px dashed #808080;
+    margin-left: 7px;
+    margin-top: 10px;
   }
 }
 .countPeople {
