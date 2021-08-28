@@ -85,6 +85,7 @@ export default {
 
 <style scoped lang="scss">
 .unit {
+  margin-top: 16px;
   &__title {
     cursor: pointer;
     display: flex;
