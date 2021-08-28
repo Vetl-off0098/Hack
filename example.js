@@ -1,0 +1,287 @@
+units: [
+  {
+    id: 4,
+    title: 'Комитет по управлению Правобережным округом',
+    peopleCount: 12,
+    employees: [
+      {
+        id: 11,
+        url: '../../static/Ruslan.png',
+        fio: 'Эдельман Татьяна Николаевна',
+        position: 'Председатель комитета',
+        diligence: '7.8',
+      },
+      {
+        id: 22,
+        url: '../../public/svg/Ruslan.png',
+        fio: 'Перевалова Надежда Анатольевна',
+        position: 'Консультат по правовым вопросам',
+        diligence: '7.8',
+      },
+      {
+        id: 33,
+        url: '../../public/static/svg/Ruslan.png',
+        fio: 'Уколова Мария Романовна',
+        position: 'Консультат по правовым вопросам',
+        diligence: '7.8',
+      },
+    ],
+    otherUnits: [
+      {
+        title: 'Комитет по управлению Правобережным округом',
+        peopleCount: 12,
+        employees: [
+          {
+            id: 11,
+            url: '../../static/Ruslan.png',
+            fio: 'Эдельман Татьяна Николаевна',
+            position: 'Председатель комитета',
+            diligence: '7.8',
+          },
+          {
+            id: 22,
+            url: '../../public/svg/Ruslan.png',
+            fio: 'Перевалова Надежда Анатольевна',
+            position: 'Консультат по правовым вопросам',
+            diligence: '7.8',
+          },
+          {
+            id: 33,
+            url: '../../public/static/svg/Ruslan.png',
+            fio: 'Уколова Мария Романовна',
+            position: 'Консультат по правовым вопросам',
+            diligence: '7.8',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 5,
+    title: 'Комитет по управлению Правобережным округом',
+    peopleCount: 12,
+    employees: [
+      {
+        id: 11,
+        url: '../../static/Ruslan.png',
+        fio: 'Эдельман Татьяна Николаевна',
+        position: 'Председатель комитета',
+        diligence: '7.8',
+      },
+      {
+        id: 22,
+        url: '../../public/svg/Ruslan.png',
+        fio: 'Перевалова Надежда Анатольевна',
+        position: 'Консультат по правовым вопросам',
+        diligence: '7.8',
+      },
+      {
+        id: 33,
+        url: '../../public/static/svg/Ruslan.png',
+        fio: 'Уколова Мария Романовна',
+        position: 'Консультат по правовым вопросам',
+        diligence: '7.8',
+      },
+    ],
+    otherUnits: [
+      {
+        title: 'Комитет по управлению Свердловским округом',
+        peopleCount: 12,
+        employees: [
+          {
+            id: 11,
+            url: '../../static/Ruslan.png',
+            fio: 'Эдельман Татьяна Николаевна',
+            position: 'Председатель комитета',
+            diligence: '7.8',
+          },
+          {
+            id: 22,
+            url: '../../public/svg/Ruslan.png',
+            fio: 'Перевалова Надежда Анатольевна',
+            position: 'Консультат по правовым вопросам',
+            diligence: '7.8',
+          },
+          {
+            id: 33,
+            url: '../../public/static/svg/Ruslan.png',
+            fio: 'Уколова Мария Романовна',
+            position: 'Консультат по правовым вопросам',
+            diligence: '7.8',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 6,
+    title: 'Комитет по управлению Октябрьским округом',
+    peopleCount: 12,
+    employees: [
+      {
+        id: 11,
+        url: '../../static/Ruslan.png',
+        fio: 'Эдельман Татьяна Николаевна',
+        position: 'Председатель комитета',
+        diligence: '7.8',
+      },
+      {
+        id: 22,
+        url: '../../public/svg/Ruslan.png',
+        fio: 'Перевалова Надежда Анатольевна',
+        position: 'Консультат по правовым вопросам',
+        diligence: '7.8',
+      },
+      {
+        id: 33,
+        url: '../../public/static/svg/Ruslan.png',
+        fio: 'Уколова Мария Романовна',
+        position: 'Консультат по правовым вопросам',
+        diligence: '7.8',
+      },
+    ],
+    otherUnits: [
+      {
+        title: 'Комитет по социальной политике и культуре',
+        peopleCount: 12,
+        employees: [
+          {
+            id: 11,
+            url: '../../static/Ruslan.png',
+            fio: 'Эдельман Татьяна Николаевна',
+            position: 'Председатель комитета',
+            diligence: '7.8',
+          },
+          {
+            id: 22,
+            url: '../../public/svg/Ruslan.png',
+            fio: 'Перевалова Надежда Анатольевна',
+            position: 'Консультат по правовым вопросам',
+            diligence: '7.8',
+          },
+          {
+            id: 33,
+            url: '../../public/static/svg/Ruslan.png',
+            fio: 'Уколова Мария Романовна',
+            position: 'Консультат по правовым вопросам',
+            diligence: '7.8',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 7,
+    title: 'Комитет по управлению Свердловским округом',
+    peopleCount: 12,
+    employees: [
+      {
+        id: 11,
+        url: '../../static/Ruslan.png',
+        fio: 'Эдельман Татьяна Николаевна',
+        position: 'Председатель комитета',
+        diligence: '7.8',
+      },
+      {
+        id: 22,
+        url: '../../public/svg/Ruslan.png',
+        fio: 'Перевалова Надежда Анатольевна',
+        position: 'Консультат по правовым вопросам',
+        diligence: '7.8',
+      },
+      {
+        id: 33,
+        url: '../../public/static/svg/Ruslan.png',
+        fio: 'Уколова Мария Романовна',
+        position: 'Консультат по правовым вопросам',
+        diligence: '7.8',
+      },
+    ],
+    otherUnits: [
+      {
+        title: 'Комитет городского обустройства ',
+        peopleCount: 12,
+        employees: [
+          {
+            id: 11,
+            url: '../../static/Ruslan.png',
+            fio: 'Эдельман Татьяна Николаевна',
+            position: 'Председатель комитета',
+            diligence: '7.8',
+          },
+          {
+            id: 22,
+            url: '../../public/svg/Ruslan.png',
+            fio: 'Перевалова Надежда Анатольевна',
+            position: 'Консультат по правовым вопросам',
+            diligence: '7.8',
+          },
+          {
+            id: 33,
+            url: '../../public/static/svg/Ruslan.png',
+            fio: 'Уколова Мария Романовна',
+            position: 'Консультат по правовым вопросам',
+            diligence: '7.8',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 8,
+    title: 'Комитет по управлению Ленинским округом',
+    peopleCount: 12,
+    employees: [
+      {
+        id: 11,
+        url: '../../static/Ruslan.png',
+        fio: 'Эдельман Татьяна Николаевна',
+        position: 'Председатель комитета',
+        diligence: '7.8',
+      },
+      {
+        id: 22,
+        url: '../../public/svg/Ruslan.png',
+        fio: 'Перевалова Надежда Анатольевна',
+        position: 'Консультат по правовым вопросам',
+        diligence: '7.8',
+      },
+      {
+        id: 33,
+        url: '../../public/static/svg/Ruslan.png',
+        fio: 'Уколова Мария Романовна',
+        position: 'Консультат по правовым вопросам',
+        diligence: '7.8',
+      },
+    ],
+    otherUnits: [
+      {
+        title: 'Комитет по управлению Правобережным округом',
+        peopleCount: 12,
+        employees: [
+          {
+            id: 11,
+            url: '../../static/Ruslan.png',
+            fio: 'Эдельман Татьяна Николаевна',
+            position: 'Председатель комитета',
+            diligence: '7.8',
+          },
+          {
+            id: 22,
+            url: '../../public/svg/Ruslan.png',
+            fio: 'Перевалова Надежда Анатольевна',
+            position: 'Консультат по правовым вопросам',
+            diligence: '7.8',
+          },
+          {
+            id: 33,
+            url: '../../public/static/svg/Ruslan.png',
+            fio: 'Уколова Мария Романовна',
+            position: 'Консультат по правовым вопросам',
+            diligence: '7.8',
+          },
+        ],
+      },
+    ],
+  },
+],

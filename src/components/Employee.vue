@@ -13,8 +13,8 @@
 
     <div class="employee__workload">
       <v-progress-linear
-        v-model="currentValue"
-        :buffer-value="bufferValue"
+        v-model="employee.workload"
+        :buffer-value="100"
         color="#1DA442"
       ></v-progress-linear>
     </div>

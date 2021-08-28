@@ -61,7 +61,7 @@
         v-for="unit of units"
         :key="unit.id"
       >
-        <Unit />
+        <Unit :unit="unit"/>
       </div>
     </div>
   </div>
@@ -88,6 +88,7 @@ export default {
           fio: 'Руслан Николаевич Болотов',
           position: 'Мэр города',
           diligence: '7.8',
+          workload: 30,
         },
         {
           id: 2,
@@ -95,6 +96,7 @@ export default {
           fio: 'Южаков Андрей Владимирович',
           position: 'Первый заместитель мэра',
           diligence: '7.8',
+          workload: 30,
         },
         {
           id: 3,
@@ -102,6 +104,7 @@ export default {
           fio: 'Ружников Дмитрий Олегович',
           position: 'Вице-мэр',
           diligence: '7.8',
+          workload: 30,
         },
       ],
       units: [
@@ -109,6 +112,7 @@ export default {
           id: 4,
           title: 'Комитет по управлению Правобережным округом',
           peopleCount: 12,
+          workload: 30,
           employees: [
             {
               id: 11,
@@ -134,8 +138,10 @@ export default {
           ],
           otherUnits: [
             {
+              id: 555,
               title: 'Комитет по управлению Правобережным округом',
               peopleCount: 12,
+              workload: 30,
               employees: [
                 {
                   id: 11,
@@ -166,6 +172,7 @@ export default {
           id: 5,
           title: 'Комитет по управлению Правобережным округом',
           peopleCount: 12,
+          workload: 30,
           employees: [
             {
               id: 11,
@@ -191,8 +198,10 @@ export default {
           ],
           otherUnits: [
             {
+              id: 666,
               title: 'Комитет по управлению Свердловским округом',
               peopleCount: 12,
+              workload: 30,
               employees: [
                 {
                   id: 11,
@@ -223,6 +232,7 @@ export default {
           id: 6,
           title: 'Комитет по управлению Октябрьским округом',
           peopleCount: 12,
+          workload: 30,
           employees: [
             {
               id: 11,
@@ -248,8 +258,10 @@ export default {
           ],
           otherUnits: [
             {
+              id: 777,
               title: 'Комитет по социальной политике и культуре',
               peopleCount: 12,
+              workload: 30,
               employees: [
                 {
                   id: 11,
@@ -280,6 +292,7 @@ export default {
           id: 7,
           title: 'Комитет по управлению Свердловским округом',
           peopleCount: 12,
+          workload: 30,
           employees: [
             {
               id: 11,
@@ -305,8 +318,10 @@ export default {
           ],
           otherUnits: [
             {
+              id: 888,
               title: 'Комитет городского обустройства ',
               peopleCount: 12,
+              workload: 30,
               employees: [
                 {
                   id: 11,
@@ -337,6 +352,7 @@ export default {
           id: 8,
           title: 'Комитет по управлению Ленинским округом',
           peopleCount: 12,
+          workload: 30,
           employees: [
             {
               id: 11,
@@ -362,8 +378,10 @@ export default {
           ],
           otherUnits: [
             {
+              id: 999,
               title: 'Комитет по управлению Правобережным округом',
               peopleCount: 12,
+              workload: 30,
               employees: [
                 {
                   id: 11,
