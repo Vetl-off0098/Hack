@@ -52,9 +52,9 @@
         Кому назначить задачу
       </div>
 
-      <div v-if="candidates.length > 0">
+      <div v-if="task.komuNaznachit.length > 0">
         <div
-          v-for="person of candidates"
+          v-for="person of task.komuNaznachit"
           :key="person.id"
           class="candidateWrap"
         >
@@ -62,9 +62,9 @@
         </div>
       </div>
 
-      <div v-if="units.length > 0">
+      <div v-if="task.komuNaznachitUnits.length > 0">
         <div
-          v-for="unit of units"
+          v-for="unit of task.komuNaznachitUnits"
           :key="unit.id"
           class="candidateWrap"
         >
@@ -499,6 +499,7 @@ export default {
 
 <style scoped lang="scss">
 .taskDescription {
+  padding-bottom: 12px;
   &__title {
     font-weight: 600;
     font-size: 20px;

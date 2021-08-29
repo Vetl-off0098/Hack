@@ -1,5 +1,5 @@
 <template>
-  <div class="employee">
+  <div class="employee" @click="openUserInfo">
 <!--    <div class="employee__icon" :style="{backgroundImage: `url(${employee.url})`}"></div>-->
     <div class="employee__icon"></div>
 
@@ -32,6 +32,7 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex';
 
 export default {
   name: 'Employee',
@@ -43,6 +44,11 @@ export default {
       bufferValue: 100,
       currentValue: 30,
     };
+  },
+  methods: {
+    ...mapMutations({
+      openUserInfo: 'openUserInfo',
+    }),
   },
 };
 </script>

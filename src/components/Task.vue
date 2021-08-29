@@ -8,7 +8,7 @@
 
     <div class="task__title">{{ task.title }}</div>
 
-    <div class="task__text">{{ task.text }}</div>
+    <div class="task__text">{{ task.shortText }}</div>
 
     <div class="task__dateAndDays">
       <div class="task__date">

@@ -6,6 +6,7 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     employes: {},
+    userInfoOpen: false,
     isMainPage: true,
     isListPage: false,
     currentTask: {},
@@ -22,6 +23,13 @@ export default new Vuex.Store({
         date: '27.08.21',
         days: '3 дня',
         source: 'Приемная',
+        komuNaznachitUnits: [
+          {
+            name: 'Казначейский отдел',
+            unit: 'Комитет городского обустройства',
+            workload: 30,
+          },
+        ],
         komuNaznachit: [
           {
             id: 1,
@@ -105,11 +113,17 @@ export default new Vuex.Store({
     back(state) {
       state.manually = false;
     },
+    openUserInfo(state) {
+      state.userInfoOpen = true;
+    },
+    closeUserInfo(state) {
+      state.userInfoOpen = false;
+    },
   },
   actions: {
     async fetchEmployes({ commit }) {
       try {
-        let response = await fetch('http://185.155.17.64:8080/api/organization');
+        let response = await fetch(`${process.env.VUE_APP_BASE_URL}/api/organization`);
         response = await response.json();
         if (!response) return;
 
@@ -120,12 +134,12 @@ export default new Vuex.Store({
     },
     async fetchTasks({ commit }) {
       try {
-        let response = await fetch('http://185.155.17.64:8080/api/tasks');
+        let response = await fetch(`${process.env.VUE_APP_BASE_URL}/api/tasks`);
         response = await response.json();
         if (!response) return;
 
         commit('setTasks', response.tasks);
-        commit('openCurrentTask');
+        // commit('openCurrentTask');
       } catch (err) {
         console.error(err);
       }
@@ -136,6 +150,7 @@ export default new Vuex.Store({
   getters: {
     employes: (s) => s.employes,
     tasks: (s) => s.tasks,
+    userInfoOpen: (s) => s.userInfoOpen,
     isMainPage: (s) => s.isMainPage,
     isListPage: (s) => s.isListPage,
     currentTask: (s) => s.currentTask,
