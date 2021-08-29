@@ -198,7 +198,7 @@ export default {
   width: 302px;
   margin-top: 24px;
   margin-left: 24px;
-  max-height: 618px;
+  height: fit-content;
   overflow-y: scroll;
   position: relative;
   overflow-x: hidden;
