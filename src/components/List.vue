@@ -20,13 +20,13 @@
         <div class="tasksList__toggle">
           <div class="tasksList__toggleTitle">Автоматическое распределение</div>
 
-          <v-switch
-            v-model="automatic"
-            color="black"
-            inset
-            flat
-            dense
-          ></v-switch>
+          <div
+            class="taskList__switch switch"
+            :class="{ blackSwitch: switched }"
+            @click="switched = !switched"
+          >
+            <div class="switch__circle"></div>
+          </div>
         </div>
 
         <div class="taskWrap">
@@ -76,6 +76,7 @@ export default {
   data() {
     return {
       automatic: true,
+      switched: false,
       taskList: [
         {
           id: 1,
@@ -220,7 +221,9 @@ export default {
     margin-left: 16px;
   }
   &__toggle {
+    height: 48px;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid #EAEAEA;
     position: sticky;
@@ -235,7 +238,6 @@ export default {
     font-size: 12px;
     line-height: 14px;
     color: #000000;
-    margin-top: 24px;
     margin-left: 16px;
   }
   &__shadow {
@@ -265,6 +267,33 @@ export default {
     font-weight: 500;
     font-size: 26px;
     color: #808080;
+  }
+}
+.switch {
+  width: 28px;
+  height: 17px;
+  background: #fff;
+  border: 1px solid #14121F;
+  border-radius: 500px;
+  position: relative;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: .3s;
+  &__circle {
+    width: 12px;
+    height: 12px;
+    background: #14121F;
+    border-radius: 50%;
+    position: absolute;
+    top: 1.3px;
+    left: 2px;
+  }
+}
+.blackSwitch {
+  background: #14121F;
+  & .switch__circle {
+    background: #fff;
+    left: 10px;
   }
 }
 </style>
