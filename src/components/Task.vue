@@ -1,7 +1,7 @@
 <template>
   <div
     class="task"
-    :class="{ task_active: wasClicked }"
+    :class="{ task_active: task.id === currentTask.id }"
     @click="openTaskDescription"
   >
     <div class="task__degreeBlock">{{ task.degree }}</div>
@@ -27,6 +27,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 
 export default {
   name: 'Task',
@@ -35,12 +36,17 @@ export default {
   },
   data() {
     return {
-      wasClicked: false,
+      // wasClicked: false,
     };
+  },
+  computed: {
+    ...mapGetters({
+      currentTask: 'currentTask',
+    }),
   },
   methods: {
     openTaskDescription() {
-      this.wasClicked = !this.wasClicked;
+      // this.wasClicked = !this.wasClicked;
       this.$emit('openCurrentTask');
     },
   },

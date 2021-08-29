@@ -9,6 +9,7 @@ export default new Vuex.Store({
     isListPage: false,
     currentTask: {},
     currentTaskLoaded: false,
+    manually: false,
     tasks: [
       {
         id: 1,
@@ -90,6 +91,9 @@ export default new Vuex.Store({
       state.currentTask = state.tasks.find((el) => el.id === id);
       state.currentTaskLoaded = true;
     },
+    openManually(state) {
+      state.manually = true;
+    },
   },
   actions: {
   },
@@ -100,5 +104,6 @@ export default new Vuex.Store({
     isListPage: (s) => s.isListPage,
     currentTask: (s) => s.currentTask,
     currentTaskLoaded: (s) => s.currentTaskLoaded,
+    manually: (s) => s.manually,
   },
 });
