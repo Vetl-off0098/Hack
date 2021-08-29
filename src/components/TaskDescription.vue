@@ -88,7 +88,10 @@
 
       <div class="manuallyBlock__main">
         <div class="manuallyBlock__header">
-          <div class="manuallyBlock__svgAndTitle">
+          <div
+            class="manuallyBlock__svgAndTitle"
+            @click="back"
+          >
             <div class="manuallyBlock__svg"></div>
 
             <div class="manuallyBlock__title">Назначить вручную</div>
@@ -488,6 +491,7 @@ export default {
   methods: {
     ...mapMutations({
       openManually: 'openManually',
+      back: 'back',
     }),
   },
 };
@@ -648,8 +652,11 @@ export default {
   }
   &__svgAndTitle {
     display: flex;
+    align-items: center;
     margin-top: 26px;
     margin-left: 26px;
+    height: 20px;
+    cursor: pointer;
   }
   &__svg {
     background-image: url("../../public/svg/Direction.svg");

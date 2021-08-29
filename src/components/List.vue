@@ -31,7 +31,7 @@
 
         <div class="taskWrap">
           <div
-            v-for="task of taskList"
+            v-for="task of tasks"
             :key="task.id"
           >
             <Task
@@ -63,7 +63,7 @@
 </template>
 
 <script>
-import { mapMutations, mapGetters } from 'vuex';
+import { mapActions, mapMutations, mapGetters } from 'vuex';
 import Task from '@/components/Task.vue';
 import TaskDescription from '@/components/TaskDescription.vue';
 
@@ -114,13 +114,20 @@ export default {
   },
   computed: {
     ...mapGetters({
+      tasks: 'tasks',
       currentTask: 'currentTask',
       currentTaskLoaded: 'currentTaskLoaded',
     }),
   },
+  mounted() {
+    this.fetchTasks();
+  },
   methods: {
     ...mapMutations({
       openCurrentTask: 'openCurrentTask',
+    }),
+    ...mapActions({
+      fetchTasks: 'fetchTasks',
     }),
     openTask(id) {
       this.$store.commit('openCurrentTask', id);

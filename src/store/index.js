@@ -5,12 +5,14 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
+    employes: {},
     isMainPage: true,
     isListPage: false,
     currentTask: {},
     currentTaskLoaded: false,
     manually: false,
-    tasks: [
+    tasks: [],
+    tasks1: [
       {
         id: 1,
         degree: 'Легкая',
@@ -79,6 +81,9 @@ export default new Vuex.Store({
     ],
   },
   mutations: {
+    setEmployes(state, response) {
+      state.employes = response;
+    },
     goToMainPage(state) {
       state.isListPage = false;
       state.isMainPage = true;
@@ -87,6 +92,9 @@ export default new Vuex.Store({
       state.isMainPage = false;
       state.isListPage = true;
     },
+    setTasks(state, response) {
+      state.tasks = response;
+    },
     openCurrentTask(state, id) {
       state.currentTask = state.tasks.find((el) => el.id === id);
       state.currentTaskLoaded = true;
@@ -94,12 +102,40 @@ export default new Vuex.Store({
     openManually(state) {
       state.manually = true;
     },
+    back(state) {
+      state.manually = false;
+    },
   },
   actions: {
+    async fetchEmployes({ commit }) {
+      try {
+        let response = await fetch('http://185.155.17.64:8080/api/organization');
+        response = await response.json();
+        if (!response) return;
+
+        commit('setEmployes', response);
+      } catch (err) {
+        console.error(err);
+      }
+    },
+    async fetchTasks({ commit }) {
+      try {
+        let response = await fetch('http://185.155.17.64:8080/api/tasks');
+        response = await response.json();
+        if (!response) return;
+
+        commit('setTasks', response.tasks);
+        commit('openCurrentTask');
+      } catch (err) {
+        console.error(err);
+      }
+    },
   },
   modules: {
   },
   getters: {
+    employes: (s) => s.employes,
+    tasks: (s) => s.tasks,
     isMainPage: (s) => s.isMainPage,
     isListPage: (s) => s.isListPage,
     currentTask: (s) => s.currentTask,

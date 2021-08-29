@@ -50,7 +50,7 @@
 
       <div
         class="employees__main"
-        v-for="empl of employes"
+        v-for="empl of employes.employees"
         :key="empl.id"
       >
         <Employee :employee="empl"/>
@@ -58,7 +58,7 @@
 
       <div
         class="organizationalUnit"
-        v-for="unit of units"
+        v-for="unit of employes.units"
         :key="unit.id"
       >
         <Unit :unit="unit"/>
@@ -68,6 +68,7 @@
 </template>
 
 <script>
+import { mapActions, mapGetters } from 'vuex';
 import Employee from '@/components/Employee.vue';
 import Card from '@/components/Card.vue';
 import Unit from '@/components/Unit.vue';
@@ -79,34 +80,37 @@ export default {
     Card,
     Unit,
   },
+  mounted() {
+    this.fetchEmployes();
+  },
   data() {
     return {
-      employes: [
-        {
-          id: 1,
-          url: '../../static/Ruslan.png',
-          fio: 'Руслан Николаевич Болотов',
-          position: 'Мэр города',
-          diligence: '7.8',
-          workload: 30,
-        },
-        {
-          id: 2,
-          url: '../../public/svg/Ruslan.png',
-          fio: 'Южаков Андрей Владимирович',
-          position: 'Первый заместитель мэра',
-          diligence: '7.8',
-          workload: 30,
-        },
-        {
-          id: 3,
-          url: '../../public/svg/Ruslan.png',
-          fio: 'Ружников Дмитрий Олегович',
-          position: 'Вице-мэр',
-          diligence: '7.8',
-          workload: 30,
-        },
-      ],
+      // employes: [
+      //   {
+      //     id: 1,
+      //     url: '../../static/Ruslan.png',
+      //     fio: 'Руслан Николаевич Болотов',
+      //     position: 'Мэр города',
+      //     diligence: '7.8',
+      //     workload: 30,
+      //   },
+      //   {
+      //     id: 2,
+      //     url: '../../public/svg/Ruslan.png',
+      //     fio: 'Южаков Андрей Владимирович',
+      //     position: 'Первый заместитель мэра',
+      //     diligence: '7.8',
+      //     workload: 30,
+      //   },
+      //   {
+      //     id: 3,
+      //     url: '../../public/svg/Ruslan.png',
+      //     fio: 'Ружников Дмитрий Олегович',
+      //     position: 'Вице-мэр',
+      //     diligence: '7.8',
+      //     workload: 30,
+      //   },
+      // ],
       units: [
         {
           id: 4,
@@ -428,6 +432,16 @@ export default {
         },
       ],
     };
+  },
+  computed: {
+    ...mapGetters({
+      employes: 'employes',
+    }),
+  },
+  methods: {
+    ...mapActions({
+      fetchEmployes: 'fetchEmployes',
+    }),
   },
 };
 
