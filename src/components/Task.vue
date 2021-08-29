@@ -1,5 +1,9 @@
 <template>
-  <div class="task">
+  <div
+    class="task"
+    :class="{ task_active: wasClicked }"
+    @click="openTaskDescription"
+  >
     <div class="task__degreeBlock">{{ task.degree }}</div>
 
     <div class="task__title">{{ task.title }}</div>
@@ -31,8 +35,14 @@ export default {
   },
   data() {
     return {
-
+      wasClicked: false,
     };
+  },
+  methods: {
+    openTaskDescription() {
+      this.wasClicked = !this.wasClicked;
+      this.$emit('openCurrentTask');
+    },
   },
 };
 </script>
@@ -42,6 +52,7 @@ export default {
   padding: 16px;
   border-bottom: 1px solid #EAEAEA;
   position: relative;
+  cursor: pointer;
   &__degreeBlock {
     font-style: normal;
     font-weight: 500;
@@ -107,6 +118,12 @@ export default {
     width: 16px;
     height: 16px;
     margin-right: 10px;
+  }
+  &:hover {
+    background-color: #F5F5F5;
+  }
+  &_active {
+    border-right: 2px solid #000;
   }
 }
 </style>

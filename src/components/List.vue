@@ -34,33 +34,51 @@
             v-for="task of taskList"
             :key="task.id"
           >
-            <Task :task="task"/>
+            <Task
+              :task="task"
+              @openCurrentTask="openTask(task.id)"
+            />
           </div>
         </div>
 
         <div class="tasksList__shadow"></div>
       </div>
 
-      <div class="main__aboutTasks aboutTasks">
-
+      <div
+        v-if="currentTaskLoaded"
+        class="main__aboutTasks aboutTasks"
+      >
+        <TaskDescription :task="currentTask"/>
+      </div>
+      <div
+        v-else
+        class="noAboutTasks"
+      >
+        <div class="noAboutTasks__value">
+          выберите задачу
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import { mapMutations, mapGetters } from 'vuex';
 import Task from '@/components/Task.vue';
+import TaskDescription from '@/components/TaskDescription.vue';
 
 export default {
   name: 'List',
   components: {
     Task,
+    TaskDescription,
   },
   data() {
     return {
       automatic: true,
       taskList: [
         {
+          id: 1,
           degree: 'Легкая',
           title: 'Убрать мусор в подъезде',
           text: 'Короче, Меченый, я тебя спас и в благородство играть не выполнишь...',
@@ -68,6 +86,7 @@ export default {
           days: '3 дня',
         },
         {
+          id: 2,
           degree: 'Средняя',
           title: 'Убрать мусор в подъезде',
           text: 'Короче, Меченый, я тебя спас и в благородство играть не выполнишь...',
@@ -75,6 +94,7 @@ export default {
           days: '3 дня',
         },
         {
+          id: 3,
           degree: 'Сложная',
           title: 'Убрать мусор в подъезде',
           text: 'Короче, Меченый, я тебя спас и в благородство играть не выполнишь...',
@@ -82,6 +102,7 @@ export default {
           days: '3 дня',
         },
         {
+          id: 4,
           degree: 'Легкая',
           title: 'Убрать мусор в подъезде',
           text: 'Короче, Меченый, я тебя спас и в благородство играть не выполнишь...',
@@ -91,6 +112,20 @@ export default {
       ],
     };
   },
+  computed: {
+    ...mapGetters({
+      currentTask: 'currentTask',
+      currentTaskLoaded: 'currentTaskLoaded',
+    }),
+  },
+  methods: {
+    ...mapMutations({
+      openCurrentTask: 'openCurrentTask',
+    }),
+    openTask(id) {
+      this.$store.commit('openCurrentTask', id);
+    },
+  },
 };
 </script>
 
@@ -99,6 +134,9 @@ export default {
   width: 100%;
   background-color: #FFFFFF;
   border-radius: 20px 0 0 20px;
+  &__main {
+    display: flex;
+  }
 }
 .header {
   display: flex;
@@ -196,9 +234,30 @@ export default {
   &__shadow {
     width: 302px;
     height: 39px;
-    position: static;
+    position: sticky;
     bottom: 0;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 78.12%);
+  }
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+.aboutTasks {
+  width: 65%;
+  margin-top: 32px;
+  margin-left: 32px;
+}
+.noAboutTasks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  &__value {
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 26px;
+    color: #808080;
   }
 }
 </style>
