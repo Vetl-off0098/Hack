@@ -24,7 +24,7 @@
     <div class="candidate__probability">
       <div class="candidate__probabilityTitle">Вероятность выполнения</div>
 
-      <div class="candidate__probabilityValue">{{ info.probability }}</div>
+      <div class="candidate__probabilityValue">{{ info.probability }}%</div>
     </div>
   </div>
 </template>
